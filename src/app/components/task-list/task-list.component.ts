@@ -18,6 +18,16 @@ export class TaskListComponent implements OnInit {
   }
 
   handleDeleteTask(task: ITask) {
-    console.log('task:', task);
+    this.tasksService.deleteTask(Number(task?.id)).subscribe(() => {
+      this.tasks = this.tasks.filter((t) => t.id !== task.id);
+    });
+  }
+
+  handleUpdateReminder(task: ITask) {
+    this.tasksService.updateReminder(task).subscribe();
+  }
+
+  handleAddTask(task: ITask) {
+    this.tasksService.createTask(task).subscribe(() => this.tasks.push(task));
   }
 }

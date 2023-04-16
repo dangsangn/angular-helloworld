@@ -1,4 +1,5 @@
 <div class="container">
-  <h1 class="title">Task Feature</h1>
-  <app-button text="click" (btnClick)="handleClick()"></app-button>
+  <h1 class="title">{{title}}</h1>
+  <app-button *ngIf="hasRoute('/')" text="{{showAddTask ? 'Close': 'Add Task'}}"
+    color="{{showAddTask ? 'warn': 'primary'}}" (btnClick)="handleClick()"></app-button>
 </div>

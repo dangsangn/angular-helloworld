@@ -1,4 +1,4 @@
-<div class="container">
+<div [ngClass]="{'task-reminder': task.reminder}" class="container" (dblclick)="handleDoubleClick(task)">
   <div class="wrapTitle">
     <h3>{{task.text}} </h3>
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="close" class="icon"
