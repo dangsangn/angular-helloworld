@@ -17,10 +17,14 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import { HoverDirective } from './customDirective/hover.directive';
+import { BetterHighlightDirective } from './customDirective/better-highlight.directive';
+import { DirectiveDemoComponent } from './components/directive-demo/directive-demo.component';
 
 const appRouters: Routes = [
   { path: '', component: TaskListComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'directive', component: DirectiveDemoComponent },
 ];
 @NgModule({
   declarations: [
@@ -33,6 +37,9 @@ const appRouters: Routes = [
     AboutComponent,
     FooterComponent,
     AddTaskComponent,
+    HoverDirective,
+    BetterHighlightDirective,
+    DirectiveDemoComponent,
   ],
   imports: [
     BrowserModule,
